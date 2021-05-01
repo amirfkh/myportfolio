@@ -1,0 +1,868 @@
+/*اضافه کردن فونت وب یکان به فونت های مرورگر*/
+@font-face {
+    font-family: "WebYekan";
+    src: url("fonts/WebYekan.woff") format("woff");
+}
+
+/*اضافه کردن فونت برای تایمر به فونت های مرورگر*/
+@font-face {
+    font-family: "dinar";
+    src: url("fonts/dinar.woff") format("woff");
+}
+
+/*تنظیمات کلی بدنه صفحه ایندکس*/
+body {
+    direction: rtl;
+    background-color: #fafafa;
+    font-family: WebYekan, Tahoma;
+    font-size: 13px;
+    color: #616161;
+}
+
+/*ایجاد کلاس شدو اروند برای مواقع لزوم*/
+.shadow-around {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+
+}
+
+/*ایجاد کلاس برای دو دکمه ابی و خاکستری*/
+.btn-blue {
+    border-radius: 300px;
+    background-color: #5fb7ea !important;
+    color: white !important;
+}
+
+.btn-blue:hover {
+    background: #ff688f !important;
+    color: white !important;
+}
+
+.btn-gray {
+    border-radius: 300px;
+    background-color: gray !important;
+    color: white !important;
+}
+
+.btn-gray:hover {
+    background: #5fb7ea !important;
+    color: white !important;
+}
+
+/*ایجاد کلاس دکمه برای بخش special-offer*/
+.btn-green {
+    min-width: 110px;
+    padding: 8px 30px;
+    background-color: greenyellow;
+    border-radius: 300px;
+    color: #777777 !important;
+}
+
+.btn-white {
+    min-width: 110px;
+    padding: 8px 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 300px;
+    color: white !important;
+}
+
+a, a:hover, a:active, a:focus, a:visited {
+    color: #0971ad;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+/*The style of top header*/
+.header-top {
+    background-color: #253B7D;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.header-top ul li {
+    float: right;
+}
+
+.header-top ul li a {
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.header-top ul li a:hover {
+    color: #0971ad;
+}
+
+/*The style of main header*/
+.header-main {
+    padding: 50px 0;
+}
+
+.header-main .logo {
+    float: left;
+}
+
+/*تگ والد ایکون سبد خرید*/
+.header-main nav {
+    position: relative;
+}
+
+.header-main ul {
+    padding-right: 60px;
+    z-index: 1000;
+}
+
+.header-main ul li {
+    display: inline-block;
+    float: right;
+    position: relative;
+}
+
+.header-main ul li a {
+    padding: 10px 20px 20px;
+    display: block;
+    color: #616161;
+    font-size: 14px;
+}
+
+.header-main ul li a:hover {
+    color: #ff688f;
+}
+
+.header-main ul li ul {
+    position: absolute;
+    width: 250px;
+    opacity: 0; /*1-پنهان کردن زیر منو*/
+    visibility: hidden;
+    top: 100%;
+    right: 0;
+    padding: 0;
+    background-color: white; /*دادن رنگ به زیرمنو و ایجاد سایه*/
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    margin: 20px 0 0; /*1-نمایش زیر منو بصورت از پایین به بالا*/
+    transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.header-main ul li ul li {
+    width: 100%;
+    float: none;
+    display: block;
+}
+
+.header-main ul li:hover ul {
+    opacity: 1; /*2-اشکار کردن زیرمنو*/
+    visibility: visible;
+    margin: 0; /*2-نمایش زیر منو بصورت از پایین به بالا*/
+}
+
+/*ایجاد شکل مثلث*/
+.header-main ul li ul:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
+    top: -10px;
+    right: 15px;
+}
+
+/*اضافه کردن پدینگ به اطراف کلمه زیر منو*/
+.header-main ul li ul li a {
+    padding: 15px;
+}
+
+.header-main ul li ul li a:hover {
+    background: #ff688f;
+    color: white;
+}
+
+/*شکل دهی به آیکون سبد خرید*/
+.header-main .open-cart {
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 50%;
+    background: #ff688f url("images/basic/cart.png") no-repeat center center;
+    position: absolute;
+    top: -3px;
+    right: 10px;
+
+}
+
+/*استایل دهی سبد خرید*/
+.header-main .cart {
+    width: 800px;
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    display: none;
+    top: 60px;
+    right: 33px;
+    z-index: 100;
+}
+
+/*استایل دهی به جدول در سبد خرید*/
+.header-main .cart td {
+    border-top: 0;
+    border-bottom: 1px solid #eeeeee;
+    vertical-align: middle;
+    padding: 20px 5px;
+}
+
+/*استایل دهی به قیمت ها در سبد خرید*/
+.header-main .cart .cart-price {
+    padding: 0 15px;
+    display: block;
+    font-size: 18px;
+}
+
+/*استایل دهی به نام برندها در سبد خرید*/
+.header-main .cart h6 {
+    font-size: 14px;
+    margin: 0;
+}
+
+/*استایل دهی به تگ aها در سبد خرید*/
+.header-main .cart a {
+    color: #616161;
+}
+
+/*استایل دهی به سطل اشغال در سبد خرید*/
+.header-main .cart .fa {
+    font-size: 18px;
+}
+
+.header-main .cart .fa:hover {
+    color: #ff688f;
+}
+
+/*از بین بردن margin جدول سبد خرید*/
+.header-main table {
+    margin-bottom: 0;
+}
+
+/*استایل دهی به قیمت کل در سبد خرید*/
+.header-main .cart .pink {
+    font-size: 16px;
+    color: #ff688f;
+}
+
+/*استایل دهی به دکمه تسویه حساب در سبد خرید*/
+.header-main .cart .btn-cart {
+    padding: 10px 20px;
+    background-color: #e8e8e8;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.header-main .cart .btn-cart:hover {
+    background-color: #ff688f;
+    color: white;
+}
+
+/*ایجاد ایکون close هنگام کلیک*/
+.header-main .active-cart {
+    background: #ff688f url("images/basic/close.png") no-repeat center center;
+}
+
+/*The style of bottom header*/
+/*تنظیمات اولیه منوی پایین*/
+.header-bottom {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    background: white;
+    padding: 20px 10px;
+    border-radius: 2px;
+    z-index: 10;
+}
+
+/*استایل دهی به ایکون های اجتماعی*/
+.header-bottom .social {
+    float: left;
+}
+
+.header-bottom .social li {
+    float: left;
+    display: inline-block;
+}
+
+.header-bottom .social li a {
+    width: 30px;
+    height: 30px;
+    background-color: #5fb7ea;
+    border-radius: 50%;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    margin: 5px;
+}
+
+.header-bottom .social li a:hover {
+    background-color: #ff688f;
+}
+
+/*ایجاد اسلایدر و استایل دهی به ان*/
+.slider {
+    width: 100%;
+    position: relative;
+    margin: -45px 0 0;
+    background-size: cover;
+    background: url("images/slider/home-slider.png") center center;
+    color: white;
+    padding: 100px 0 80px;
+}
+
+/*استایل دهی به محتوای روی اسلایدر*/
+.slider .slide-content {
+    padding: 10px 0 0 80px;
+}
+
+.slider h1 {
+    margin: 0 0 15px;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.slider p {
+    line-height: 30px;
+    text-align: justify;
+}
+
+.slider .btn {
+    float: left;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin: 15px 10px 0 0;
+}
+
+/*شخصی سازی کردن بولت ها در Idicators*/
+.slider .carousel-indicators {
+    bottom: -60px;
+    right: 0;
+    left: 0;
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+.slider .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #f4f4f4;
+    border-color: #f4f4f4;
+}
+
+.slider .carousel-indicators .active {
+    width: 11px;
+    height: 11px;
+    background: #af431d;
+    border-color: #51297a;
+}
+
+/*استایل دهی به قسمت ایتم های سرویس دهی*/
+.services {
+    width: 100%;
+    background-color: white;
+    margin-bottom: 50px;
+    padding: 30px 0;
+}
+
+.services .fa {
+    width: 60px;
+    height: 60px;
+    background-color: #eaeaea;
+    border-radius: 50%;
+    float: right;
+    text-align: center;
+    line-height: 30px;
+    padding: 15px;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.services .content {
+    padding: 5px 0 0;
+}
+
+.services h4 {
+    margin-top: 0;
+}
+
+.services p {
+    color: #9e9e9e;
+}
+
+/*استایل دهی به قسمت جدیدترین محصولات*/
+/*عنوان*/
+.title {
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    color: #9f5eba;
+}
+
+.title h2 {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 22px;
+    border-bottom: 1px solid #b9b9b9;
+}
+
+.title sub {
+    display: block;
+    padding: 15px 0 25px;
+    color: #616161;
+}
+
+/*عکس ها*/
+.new-products .product {
+    position: relative;
+    background: white;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+.new-products figure {
+    border-bottom: 1px solid #e7e7e7;
+    position: relative;
+    height: auto;
+    text-align: center;
+}
+
+.new-products .product figcaption {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    top: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.new-products .product figure:hover figcaption {
+    opacity: 1;
+    visibility: visible;
+}
+
+.new-products .product figcaption ul {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0;
+}
+
+.new-products .product figcaption ul li {
+    display: inline-block;
+}
+
+.new-products .product figcaption ul li a {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    line-height: 40px;
+    background: #ff688f;
+}
+
+.new-products .product figcaption ul li a:hover {
+    background: #5fb7ea;
+}
+
+/*محتوا*/
+.new-products .product .product-content {
+    width: 100%;
+    padding: 10px 20px 20px;
+    font-size: 12px;
+    text-align: left;
+}
+
+.new-products .product .product-content h2 {
+    margin: 0;
+    font-weight: 400;
+    direction: ltr;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 5px 0 20px;
+}
+
+.new-products .product .product-content h2 a {
+    font-size: 14px;
+}
+
+.new-products .product .product-content .color-option {
+    width: 100%;
+    float: left;
+    padding: 5px 0;
+}
+
+.new-products .product .product-content .color-option ul li {
+    float: left;
+}
+
+.new-products .product .product-content .color-option ul li a {
+    color: #616161;
+}
+
+.new-products .product .product-content .color-option ul li + li:after {
+    content: "-";
+}
+
+.new-products .product .product-content .price {
+    display: block;
+    padding: 5px 0;
+    color: #ff688f;
+    text-align: left;
+    font-size: 18px;
+}
+
+.new-products .product .product-content a.product-buy {
+    height: 45px;
+    display: block;
+    background-color: #5fb7ea;
+    padding: 15px 15px 0 0;
+    position: absolute;
+    right: -5px;
+    bottom: 30px;
+    color: white;
+    z-index: 10;
+}
+
+.new-products .product .product-content a.product-buy:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    left: -22px;
+    transform: skew(-45deg, 0deg);
+    -o-transform: skew(-45deg, 0deg);
+    -moz-transform: skew(-45deg, 0deg);
+    -webkit-transform: skew(-45deg, 0deg);
+    z-index: -1;
+
+}
+
+.new-products .product .product-content a.product-buy:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -5px;
+    right: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #418fbc;
+    z-index: -2;
+}
+
+/*استایل دهی به بولت های carousel*/
+.new-products .carousel-indicators {
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+    bottom: -40px;
+}
+
+.new-products .carousel-indicators li {
+    background-color: #bdbdbd;
+    border-color: #bdbdbd;
+}
+
+.new-products .carousel-indicators li.active {
+    background-color: #418fbc;
+    border-color: #418fbc;
+}
+
+.new-products .carousel-control.right, .new-products .carousel-control.left {
+    background: transparent;
+}
+
+.new-products .carousel-control {
+    left: 0;
+    top: -60px;
+    box-shadow: none;
+}
+
+.new-products .right-arrow, .new-products .left-arrow {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    color: #9e9e9e;
+    font-size: 13px;
+    border: 1px solid #dfdfdf;
+    margin: 0 0 0 20px;
+}
+
+.new-products .carousel-control.right {
+    right: auto;
+    left: 20px;
+}
+
+.new-products .right-arrow {
+    margin: 0 0 0 40px;
+}
+
+/*استایل دهی به بخش دسترسی سریع*/
+.quick-access {
+    margin: 20px 0 0;
+}
+
+.quick-access .search-form {
+    position: relative;
+}
+
+.quick-access .search-form input[type="text"] {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #eeeeee;
+}
+
+.quick-access .search-form button {
+    width: 35px;
+    height: 35px;
+    background: white;
+    border: 0;
+    border-radius: 20px;
+    bottom: 3px;
+    left: 5px;
+    position: absolute;
+}
+
+.quick-access ul {
+    margin-top: 20px;
+}
+
+.quick-access ul li {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.quick-access ul li a {
+    display: block;
+    padding: 15px 0;
+    font-size: 13px;
+    color: #5d5d5d;
+}
+
+.quick-access ul li a span {
+    min-width: 40px;
+    padding: 5px;
+    position: absolute;
+    background: #5fb7ea;
+    color: white;
+    border-radius: 300px;
+    text-align: center;
+    font-size: 11px;
+    left: 0;
+    top: 12px;
+}
+
+.quick-access ul li a:hover span {
+    background: #ff688f;
+}
+
+/*استایل دهی به بخش زمان سنج فروش ویژه*/
+.sale-timeout {
+    width: 100%;
+    height: 450px;
+    background: #0e1b23;
+    margin: 100px 0 30px;
+    padding: 60px 0;
+    position: relative;
+}
+
+.sale-timeout:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("images/pattern.png");
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sale-timeout .sale-inner {
+    position: relative;
+    z-index: 100;
+}
+
+.sale-timeout .sale-inner figure {
+    width: 55%;
+    float: right;
+    text-align: center;
+}
+
+.sale-timeout .sale-inner figure img {
+    max-width: 70%;
+}
+
+.sale-timeout .sale-inner .sale-timeout-content {
+    width: 45%;
+    float: right;
+    padding: 20px 20px 0 0;
+    color: white;
+    text-align: center;
+}
+
+.sale-timeout .sale-inner .sale-timeout-content h2 {
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    padding: 0 20px 5px;
+}
+
+.sale-timeout .sale-inner .sale-timeout-content h2:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #343F45;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.sale-timeout .sale-inner .sale-timeout-content h2:before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    border: 1px solid #343F45;
+    bottom: 0;
+    right: 100%;
+}
+
+.sale-timeout .sale-inner .sale-timeout-content span {
+    display: block;
+    font-size: 15px;
+}
+
+.sale-timeout .sale-inner .sale-timeout-content a {
+    display: inline-block;
+    width: 230px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 25px;
+    color: #5fb7ea;
+    margin-top: 10px;
+    background: url("images/btn-bg.jpg");
+}
+
+.sale-timeout .sale-inner .sale-timeout-content .sale-timeout-counter > div {
+    width: 70px;
+    height: 100px;
+    background: url("images/timer-bg.jpg");
+    padding: 17px 0;
+    float: right;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: 'dinar';
+}
+
+.sale-timeout .sale-inner .sale-timeout-content .sale-timeout-counter div:last-child {
+    display: none;
+}
+
+.sale-timeout .sale-inner .sale-timeout-content .sale-timeout-counter {
+    width: auto;
+    display: table;
+    margin: 30px auto 0;
+}
+
+/*استایل دهی به بخش special-offers*/
+.special-offers {
+    width: 100%;
+    margin: 100px 0 50px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background: url("images/bg.jpg") fixed;
+}
+
+.special-offers .offer {
+    width: 100%;
+    float: right;
+    padding: 50px 20px;
+    color: white;
+}
+
+.special-offers .offer .offer-content {
+    float: right;
+}
+
+.special-offers .offer .offer-content h2 {
+    text-align: left;
+}
+
+.special-offers .offer .offer-content p {
+    line-height: 25px;
+    text-align: justify;
+    padding: 10px 0 10px 20px;
+}
+
+.special-offers .offer .offer-content ul {
+    float: right;
+    padding: 20px 0 0;
+}
+
+.special-offers .offer .offer-content ul li {
+    float: right;
+    padding: 0 5px;
+}
+
+.special-offers .offer figure {
+    float: left;
+}
+
+.special-offers .offer figure img{
+    max-width: 100%;
+}
+
+.special-offers .carousel-indicators{
+    width: auto;
+    margin: 0 auto;
+}
+
+
+
+
