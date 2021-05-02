@@ -30,7 +30,7 @@ body {
 
 /*ایجاد کلاس برای دو دکمه ابی و خاکستری*/
 .btn-blue {
-    border-radius: 300px;
+    padding: 8px 30px;
     background-color: #5fb7ea !important;
     color: white !important;
 }
@@ -854,15 +854,68 @@ li {
     float: left;
 }
 
-.special-offers .offer figure img{
+.special-offers .offer figure img {
     max-width: 100%;
 }
 
-.special-offers .carousel-indicators{
+.special-offers .carousel-indicators {
     width: auto;
     margin: 0 auto;
 }
 
+/*استایل دهی به بخش sales*/
+.sales {
+    width: 100%;
+    background-color: white;
+    float: left;
+    padding: 30px;
+    text-align: center;
+}
+
+.sales .sales-item {
+    position: relative;
+}
+
+.sales .sales-item figcaption {
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.4);
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sales .sales-item:hover figcaption {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sales .sales-item figcaption a {
+    width: 120px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+}
+
+.sales .sales-item h2 {
+    font-size: 15px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sales .sales-item span {
+    font-size: 18px;
+    padding: 0 5px;
+    color: #9c7f3b;
+}
 
 
 
